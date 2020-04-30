@@ -63,7 +63,7 @@ Try to see how if you follow the students' opinions, you can learn more and get 
  
 3. 	 First, let all the k students scout all the vertices. Then, call remote on the vertices in the order of majority vote, i.e. call remote on the vertex that has been confirmed to be “True” by the most students first, specifically, move the bots from this vertex to its closest neighbor (along the lowest-weight adjacent edge). Meanwhile, we also keep track of the number of bots “n” that have been moved and located so far. Continue the process until n = |L|, by which time we have found all the bots their respective locations. 
 
-4. 
+4.  
 (a) Naive algorithm: proceed with the algorithm in part(1) to move all the bots home. 
 Advantage: Easier implementation  
 Disadvantage: Significantly longer runtime since we did not take advantage of the possibility of avoiding redundant edges.  
@@ -73,10 +73,10 @@ Advantage: Better runtime since we try to only use the “inevitable” edges an
 Disadvantage: Harder implementation since we have to call scout multiple times and rank the vertices according to their majority vote. We probably need to construct a priority queue to substantiate the ranking.  
 Possible improvements: Use Multiplicative Weights Algorithm or Machine Learning (the one we used in HW12) instead of Majority Vote.  
 
-5. The first algorithm works best if the bots are uniformly and universally distributed. This means that each vertex has one bot from the beginning. Then we can directly apply part(1) without having to worry about where the bots are located at. 
+5. 
+(a) The first algorithm works best if the bots are uniformly and universally distributed. This means that each vertex has one bot from the beginning. Then we can directly apply part(1) without having to worry about where the bots are located at. 
 On the other hand, it does not work so well when the bots are scattered around in the graph. In this case, there is no guarantee that the leaf node contains a bot, so it is unnecessary to start the search in the reversed linearization order, which would result in excessive runtime. Besides, the algorithm does not take full advantage of “inevitable” edges, as the priority queue only recognizes the lowest-weight edges, but we should actually avoid using new edges even if they are a little lower-weighted.  
 
-The second algorithm works well if the bots are scattered on the graph. In this case, it is best to locate the vertices first before foolhardily trying to start calling remote right away. In other words, it is better to have an educated guess first.  
-It does not work so well when a large portion of bots lie on the vertices which most students tend to lie about. In this case, these vertices would rank relatively low by the majority vote. But in truth, they should be ranked much higher. In other words, the priority queue we constructed is rendered useless and might even backfire. The algorithm also does not work well when there are bots on most of the vertices, in which case it is better to skip step (4) and assume there are bots on every vertex. It is no longer necessary to find out the exact locations since we would not be severely punished if we assume there are bots on every vertex. 
+(b) The second algorithm works well if the bots are scattered on the graph. In this case, it is best to locate the vertices first before foolhardily trying to start calling remote right away. In other words, it is better to have an educated guess first. It does not work so well when a large portion of bots lie on the vertices which most students tend to lie about. In this case, these vertices would rank relatively low by the majority vote. But in truth, they should be ranked much higher. In other words, the priority queue we constructed is rendered useless and might even backfire. The algorithm also does not work well when there are bots on most of the vertices, in which case it is better to skip step (4) and assume there are bots on every vertex. It is no longer necessary to find out the exact locations since we would not be severely punished if we assume there are bots on every vertex. 
 
 
