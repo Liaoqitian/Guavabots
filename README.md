@@ -1,3 +1,3 @@
-# Guavabot!¶
+# Guavabot!
 Your group runs an autonomous food delivery company called Guavabot. Everything is going great - you just raised $10 million in VC funding, and you've deployed to three locations worldwide - Singapore, Tel Aviv, and Toronto. Unfortunately your intern ran rm -rf / on your production servers, losing the locations of all your bots! The bots took quite a while to develop and the prototypes are valuable, so you want to locate them and move them home. Thankfully, you have a worldwide network of students who report the locations of the bots to you via app, but these customers are not always right and may incorrectly inform you about bots' locations.
 
