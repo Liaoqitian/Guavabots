@@ -39,7 +39,7 @@ The scout cost 1 is much smaller than most edge weights w_e.
 You are given a score once you end the rescue. If the time taken so far is t and the number of Guavabots that are home is 
 g, this score is:
 
-100/(|L|+1) * (g+α/(α+t) where α∼1000 is a constant among all inputs which is yet to be determined, but is within an order a magnitude of 1000 and is about the raw time of an average solver that gets all the bots home.
+100/(|L|+1) * (g+α/(α+t)) where α∼1000 is a constant among all inputs which is yet to be determined, but is within an order a magnitude of 1000 and is about the raw time of an average solver that gets all the bots home.
 You want to get as high a score as possible. The minimum score for any instance is 0, and the maximum score for any instance is 100 (neither side is necessarily attainable, your score will fall in between).
 
 This scoring function was designed such that returning more bots is always better than spending less time. For example, say that we have 5 bots scattered on a graph:
