@@ -64,11 +64,11 @@ Try to see how if you follow the students' opinions, you can learn more and get 
 3. 	 First, let all the k students scout all the vertices. Then, call remote on the vertices in the order of majority vote, i.e. call remote on the vertex that has been confirmed to be “True” by the most students first, specifically, move the bots from this vertex to its closest neighbor (along the lowest-weight adjacent edge). Meanwhile, we also keep track of the number of bots “n” that have been moved and located so far. Continue the process until n = |L|, by which time we have found all the bots their respective locations. 
 
 4.  
-4(a) Naive algorithm: proceed with the algorithm in part(1) to move all the bots home. 
+>4(a) Naive algorithm: proceed with the algorithm in part(1) to move all the bots home. 
 Advantage: Easier implementation  
 Disadvantage: Significantly longer runtime since we did not take advantage of the possibility of avoiding redundant edges.  
 
-4(b) Use the algorithm in part(3) to find the locations of all the bots. Then proceed with the algorithm in part(2) to move them home.  
+>4(b) Use the algorithm in part(3) to find the locations of all the bots. Then proceed with the algorithm in part(2) to move them home.  
 Advantage: Better runtime since we try to only use the “inevitable” edges and avoid using the redundant ones. Since we also rank the vertices according to the majority vote, we start with the vertex that is most likely to contain a bot. Thereby, we also reduce the total cost of the remote operations as opposed to starting with a random vertex.  
 Disadvantage: Harder implementation since we have to call scout multiple times and rank the vertices according to their majority vote. We probably need to construct a priority queue to substantiate the ranking.  
 Possible improvements: Use Multiplicative Weights Algorithm or Machine Learning (the one we used in HW12) instead of Majority Vote.  
