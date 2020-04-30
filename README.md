@@ -42,11 +42,11 @@ g, this score is:
 100/(|L|+1) * (g+α/(α+t)) where α∼1000 is a constant among all inputs which is yet to be determined, but is within an order a magnitude of 1000 and is about the raw time of an average solver that gets all the bots home.
 You want to get as high a score as possible. The minimum score for any instance is 0, and the maximum score for any instance is 100 (neither side is necessarily attainable, your score will fall in between).
 
-This scoring function was designed such that returning more bots is always better than spending less time. For example, say that we have 5 bots scattered on a graph:
+This scoring function was designed such that returning more bots is always better than spending less time. For example, say that we have 5 bots scattered on a graph:  
 
-If we return 5 bots and take 10000 time, our score is ≈84.8
-If we return 2 bots and take 100 time, our score is ≈48.5
-If we return 1 bot and take 10 time, our score is ≈33.17
+If we return 5 bots and take 10000 time, our score is ≈84.8  
+If we return 2 bots and take 100 time, our score is ≈48.5  
+If we return 1 bot and take 10 time, our score is ≈33.17  
 Another way to see it: treat your score as a tuple (g,t). Scores will be ordered by g descending first, then by 
 t ascending.
 
