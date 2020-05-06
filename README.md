@@ -65,8 +65,8 @@ Try to see how if you follow the students' opinions, you can learn more and get 
 
 4.  
 * Naive algorithm: proceed with the algorithm in part(1) to move all the bots home.  
-Advantage: Easier implementation  
-Disadvantage: Significantly longer runtime since we did not take advantage of the possibility of avoiding redundant edges.  
+_Advantage_: Easier implementation  
+_Disadvantage_: Significantly longer runtime since we did not take advantage of the possibility of avoiding redundant edges.  
 
 * Use the algorithm in part(3) to find the locations of all the bots. Then proceed with the algorithm in part(2) to move them home.  
 _Advantage_: Better runtime since we try to only use the “inevitable” edges and avoid using the redundant ones. Since we also rank the vertices according to the majority vote, we start with the vertex that is most likely to contain a bot. Thereby, we also reduce the total cost of the remote operations as opposed to starting with a random vertex.  
