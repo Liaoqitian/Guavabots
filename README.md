@@ -64,7 +64,7 @@ Try to see how if you follow the students' opinions, you can learn more and get 
 3. 	 First, let all the k students scout all the vertices. Then, call remote on the vertices in the order of majority vote, i.e. call remote on the vertex that has been confirmed to be “True” by the most students first, specifically, move the bots from this vertex to its closest neighbor (along the lowest-weight adjacent edge). Meanwhile, we also keep track of the number of bots “n” that have been moved and located so far. Continue the process until n = |L|, by which time we have found all the bots their respective locations. 
 
 4.  
-* Naive algorithm: proceed with the algorithm in part(1) to move all the bots home. 
+* Naive algorithm: proceed with the algorithm in part(1) to move all the bots home.  
 Advantage: Easier implementation  
 Disadvantage: Significantly longer runtime since we did not take advantage of the possibility of avoiding redundant edges.  
 
